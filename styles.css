@@ -1,0 +1,369 @@
+/* Global Declarations */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f3f4ed;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+h1, h2, h3, h4, h5 {
+  font: inherit;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+h1 {
+  font-size: 6vw;
+  font-weight: 700;
+  line-height: 0.8;
+}
+
+h2 {
+  font-size: 7vw;
+}
+
+h3 {
+  font-size: 4vw;
+}
+
+h4 {
+  font-size: 1.6rem;
+}
+
+h5 {
+  font-size: 1.3rem;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Top navigation */
+#nav-container {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 5.5%;
+  padding-right: 5.5%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 1;
+}
+
+@media (max-width: 800px) {
+  #nav-container {
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+.nav-logo-icon {
+  background-color: yellow;
+  height: 50px;
+  width: 50px;
+}
+
+.nav-links-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 40%;
+  height: 50px;
+}
+
+@media (max-width: 800px) {
+  .nav-links-container {
+    width: 60%;
+  }
+}
+
+.nav-links-container a:hover {
+  font-weight: bold;
+}
+
+/* Page container */
+#page-container {
+  margin: 0 5%;
+  background-color: white;
+}
+
+/* Welcome image & Logo */
+#welcome-image-container {
+  position: relative;
+  object-fit: contain;
+  overflow: hidden;
+  max-height: 100vh;
+  margin-top: 50px;
+}
+
+@media (max-width: 800px) {
+  #welcome-image-container {
+    margin-top: 100px;
+  }
+}
+
+.welcome-image {
+  width: 100%;
+}
+
+.logo-main {
+  background-color: yellow;
+  padding: 20px 30px;
+  position: absolute;
+  left: 0;
+  top: 20%;
+}
+
+.section-heading {
+  background-color: yellow;
+  font-weight: 700;
+  margin: 100px 50% 0 0;
+  text-align: right;
+  padding: 0 20px;
+}
+
+.project-description-box {
+  background-color: #92c58a;
+}
+
+/* Projects*/
+.project-heading {
+  padding-top: 50px;
+  padding-bottom: 20px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.project-intro {
+  padding: 1% 15%;
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+@media (max-width: 800px) {
+  .project-intro {
+    padding: 1% 10%;
+  }
+}
+
+.project-container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  justify-content: flex-start;
+}
+
+@media (max-width: 800px) {
+  .project-container {
+    flex-direction: column;
+  }
+}
+
+/* .cell-1 {background-color: #f8ede3;}
+.cell-2 {background-color: #a2b29f;}
+.cell-3 {background-color: #bdd2b6;}
+.cell-4 {background-color: #798777;} */
+
+.project-cell {
+  /* background-color: khaki; */
+  align-items: flex-start;
+  /* horizontal aligning - inside project-cell */
+
+  border: 1px solid #F2F4F4;
+  box-shadow: 3px 5px 8px #F2F4F4;
+
+  display: flex;
+  flex: 50%;
+  flex-direction: column;
+  justify-content: space-between;
+  /* vertical aligning - inside project-cell */
+
+  margin: 15px;
+  max-width: 48%;
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+
+.project-cell:hover {
+  border: 1px solid silver;
+  box-shadow: 3px 5px 8px silver;
+}
+
+@media (max-width: 800px) {
+  .project-cell {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+.project-img-container {
+  align-self: center;
+  /* child image adjustment */
+  display: flex;
+  margin: 20px 10%;
+}
+
+.project-cell-image {
+  width: 100%;
+}
+
+.project-cell-text-container {
+  margin: 20px 10% 20px 10%;
+  height: auto;
+}
+
+.project-cell-heading {
+  padding-bottom: 20px;
+}
+
+.button-container {
+  display: flex;
+  align-self: center;
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+@media (max-width: 1200px) {
+  .button-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.button-container a {
+  display: flex;
+  height: 40px;
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 140px;
+}
+
+@media (max-width: 1200px) {
+  .button-container a {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}
+
+.button-container a button {
+  background-color: black;
+  border: solid black;
+  color: white;
+  font: inherit;
+  font-weight: 700;
+  width: 100%;
+  cursor: pointer;
+}
+
+.button-container a button:hover {
+  color: black;
+  border: solid yellow;
+  background-color: yellow;
+}
+
+/* Contact me */
+.contact-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.contact-text-container {
+  flex: 50%;
+  font: inherit;
+  line-height: 1.1;
+  max-width: 50%;
+  padding: 50px;
+}
+
+.contact-img-container {
+  flex: 50%;
+  max-width: 50%;
+  /* background-image: url(Images/Contact.jpg);
+  background-size: cover; */
+}
+
+@media (max-width: 800px) {
+  .contact-text-container {
+    flex: 100%;
+    max-width: 100%;
+  }
+
+  .contact-img-container {
+    flex: 0;
+  }
+}
+
+.contact-img {
+  width: 100%;
+  height: 100%;
+  /* essential to not shrink the image */
+  object-fit: cover;
+}
+
+/* Footer */
+#back-to-top {
+  background-color: black;
+  display: block;
+  height: 40px;
+  width: 30%;
+  margin: 30px auto;
+}
+
+#back-to-top button {
+  background-color: black;
+  border: solid black;
+  color: white;
+  height: 100%;
+  width: 100%;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#back-to-top button:hover {
+  background-color: yellow;
+  border: solid yellow;
+  color: black;
+}
+
+#logo-footer {
+  background-color: yellow;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 10px 15px 10px 100px;
+  position: absolute;
+  right: 0px;
+  text-align: right;
+  width: 300px;
+}
+
+/*
+.class1.class2 will match only the elements that have both of them classes defined.
+
+.class1.class2 { background: red; }
+<div class="class1 class2"></div>
+.class1, .class2 will match the elements with .class1 or .class2
+
+.class1, .class2 { background: yellow; }
+<div class="class1"></div>
+<div class="class2"></div>
+.class1 .class2 will match only the elements with class2 within elements with class1.
+
+.class1 .class2 { background: blue; }
+<div class="class1">
+    <div class="class2"></div>
+</div>
+*/
